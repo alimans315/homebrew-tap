@@ -1,8 +1,8 @@
 class Unarchy < Formula
   desc "Extract almost any archive on macOS: zip, 7z, rar, tar, dmg, iso and more"
   homepage "https://github.com/alimans315/unarchy"
-  url "https://github.com/alimans315/unarchy/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "52976c21114a332f3760a72345bef135848cf13efd6669e1a56580cd3e4bc463"
+  url "https://github.com/alimans315/unarchy/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "7dcd22f2ac74ca0a511474b6d8e2050f06dc3df3dd229684bbf7fb7cbb4572a7"
   license "GPL-3.0-or-later"
 
   depends_on :macos
@@ -11,6 +11,8 @@ class Unarchy < Formula
 
   def install
     bin.install "unarchy"
+    man1.install "unarchy.1"
+    zsh_completion.install "completions/_unarchy"
   end
 
   test do
